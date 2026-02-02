@@ -4,7 +4,7 @@
 
     <!-- 轮播图 Section -->
     <div class="carousel-section">
-      <el-carousel trigger="click" height="450px" :interval="5000" arrow="always" class="main-carousel">
+      <el-carousel trigger="click" height="600px" :interval="5000" arrow="always" class="main-carousel">
         <el-carousel-item v-for="(item, index) in carouselItems" :key="index">
           <div class="carousel-item-content" :style="{ backgroundImage: `url(${item.image})` }">
             <div class="carousel-overlay"></div>
@@ -21,100 +21,112 @@
           </div>
         </el-carousel-item>
       </el-carousel>
+    </div>
 
-      <!-- 悬浮功能条 -->
-      <div class="features-bar-wrapper">
-        <div class="features-bar">
-          <!-- 院校库 -->
-          <div class="feature-item" @click="router.push('/country')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <School />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>全球院校库</h3>
-              <p>覆盖英美主流名校</p>
-            </div>
+    <!-- 功能列表 Section -->
+    <div class="features-section container">
+      <div class="features-grid">
+        <!-- 院校库 -->
+        <div class="feature-item" @click="router.push('/country')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <School />
+            </el-icon>
           </div>
-
-          <!-- 专业库 -->
-          <div class="feature-item" @click="router.push('/schools/major-index')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <Reading />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>专业数据库</h3>
-              <p>海量专业详细解析</p>
-            </div>
+          <div class="feature-info">
+            <h3>全球院校库</h3>
+            <p>覆盖英美主流名校</p>
           </div>
+        </div>
 
-
-          <!-- 自主申请 -->
-          <div class="feature-item" @click="router.push('/study')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <Edit />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>自主申请</h3>
-              <p>DIY留学申请指导</p>
-            </div>
+        <!-- 专业库 -->
+        <div class="feature-item" @click="router.push('/schools/major-index')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <Reading />
+            </el-icon>
           </div>
-
-          <!-- 智能择校 -->
-          <div class="feature-item highlight" @click="router.push('/matching')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <Cpu />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>AI 智能择校</h3>
-              <p>定制专属留学方案</p>
-            </div>
+          <div class="feature-info">
+            <h3>专业数据库</h3>
+            <p>海量专业详细解析</p>
           </div>
+        </div>
 
-          <!-- 入学奖励 -->
-          <div class="feature-item" @click="router.push('/r')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <Trophy />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>入学奖励</h3>
-              <p>丰厚奖学金计划</p>
-            </div>
+        <!-- 自主申请 -->
+        <div class="feature-item" @click="router.push('/study')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <Edit />
+            </el-icon>
           </div>
-
-          <!-- 成功案例 -->
-          <div class="feature-item" @click="router.push('/cases')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <Trophy />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>成功案例</h3>
-              <p>名校录取真实案例</p>
-            </div>
+          <div class="feature-info">
+            <h3>自主申请</h3>
+            <p>DIY留学申请指导</p>
           </div>
+        </div>
 
-          <!-- 老师团队 -->
-          <div class="feature-item" @click="router.push('/teacher-consultation')">
-            <div class="feature-icon-box">
-              <el-icon>
-                <UserFilled />
-              </el-icon>
-            </div>
-            <div class="feature-info">
-              <h3>名师团队</h3>
-              <p>全球顶尖名校导师</p>
-            </div>
+        <!-- 智能择校 -->
+        <div class="feature-item highlight" @click="router.push('/matching')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <Cpu />
+            </el-icon>
+          </div>
+          <div class="feature-info">
+            <h3>AI 智能择校</h3>
+            <p>定制专属留学方案</p>
+          </div>
+        </div>
+
+        <!-- 入学奖励 -->
+        <div class="feature-item" @click="router.push('/r')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <Trophy />
+            </el-icon>
+          </div>
+          <div class="feature-info">
+            <h3>入学奖励</h3>
+            <p>丰厚奖学金计划</p>
+          </div>
+        </div>
+
+        <!-- 成功案例 -->
+        <div class="feature-item" @click="router.push('/cases')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <Trophy />
+            </el-icon>
+          </div>
+          <div class="feature-info">
+            <h3>成功案例</h3>
+            <p>名校录取真实案例</p>
+          </div>
+        </div>
+
+        <!-- 老师团队 -->
+        <div class="feature-item" @click="router.push('/teacher-consultation')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <UserFilled />
+            </el-icon>
+          </div>
+          <div class="feature-info">
+            <h3>名师团队</h3>
+            <p>全球顶尖名校导师</p>
+          </div>
+        </div>
+
+        <!-- 更多服务 (第8个) -->
+        <div class="feature-item" @click="router.push('/services')">
+          <div class="feature-icon-box">
+            <el-icon>
+              <More />
+            </el-icon>
+          </div>
+          <div class="feature-info">
+            <h3>更多服务</h3>
+            <p>探索更多留学服务</p>
           </div>
         </div>
       </div>
@@ -229,7 +241,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import NavBar from '../components/NavBar.vue'
 import FooterBar from '../components/FooterBar.vue'
-import { School, Reading, Cpu, Trophy, UserFilled, ArrowRight, Edit, ArrowDown, VideoPlay, View } from '@element-plus/icons-vue'
+import { School, Reading, Cpu, Trophy, UserFilled, ArrowRight, Edit, ArrowDown, VideoPlay, View, More } from '@element-plus/icons-vue'
 import request from '@/utils/request'
 
 const router = useRouter()
@@ -484,7 +496,7 @@ onMounted(() => {
   margin-top: 70px;
   border-radius: 0;
   box-shadow: none;
-  margin-bottom: 120px;
+  margin-bottom: 40px;
   /* 为悬浮条留出空间 */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -602,42 +614,40 @@ onMounted(() => {
   }
 }
 
-/* 悬浮功能条样式 */
-.features-bar-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(50%);
-  width: 100%;
-  z-index: 10;
-  padding: 0;
+/* 功能列表 Section 样式 */
+.features-section {
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
 }
 
-.features-bar {
-  display: flex;
-  background: white;
-  border-radius: 0;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
 .feature-item {
-  flex: 1;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0;
+  gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-right: 1px solid #f0f0f0;
-  position: relative;
-  height: 100px;
+  border-radius: 12px;
   justify-content: center;
   opacity: 0;
   animation: slideUpFade 0.6s ease-out forwards;
+}
+
+.feature-item:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-5px);
 }
 
 .feature-item:nth-child(1) {
@@ -668,6 +678,10 @@ onMounted(() => {
   animation-delay: 0.7s;
 }
 
+.feature-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
 @keyframes slideUpFade {
   from {
     opacity: 0;
@@ -680,16 +694,10 @@ onMounted(() => {
   }
 }
 
-.feature-item:last-child {
-  border-right: none;
-}
-
-.feature-item:hover {
-  background-color: #fcfcfc;
-}
-
 .feature-item.highlight {
   background: white;
+  position: relative;
+  overflow: hidden;
 }
 
 /* 高亮项顶部金条 */
@@ -711,8 +719,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  /* 图标缩小 */
+  font-size: 2.5rem;
   line-height: 1;
   transition: all 0.3s ease;
   margin-bottom: 0;
@@ -728,7 +735,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -2px;
+  margin-top: 5px;
 }
 
 .feature-info h3 {
@@ -736,7 +743,7 @@ onMounted(() => {
   font-weight: bold;
   font-family: 'Times New Roman', serif;
   color: #333;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   transition: color 0.3s ease;
   letter-spacing: 0.5px;
   line-height: 1.2;
@@ -748,16 +755,9 @@ onMounted(() => {
 
 .feature-info p {
   color: #999;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin: 0;
-  display: none;
-  /* 根据截图风格，可能只需要标题，或者描述很小。这里先隐藏描述，或者只在桌面端显示 */
-}
-
-@media (min-width: 1200px) {
-  .feature-info p {
-    display: block;
-  }
+  display: block;
 }
 
 .action-btn {
@@ -1149,28 +1149,12 @@ onMounted(() => {
 
 /* 响应式调整 */
 @media (max-width: 992px) {
-  .features-bar {
-    flex-wrap: wrap;
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .info-section {
     padding: 2rem 1rem;
-  }
-
-  .feature-item {
-    flex: 0 0 50%;
-    /* 两列布局 */
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .feature-item:nth-child(even) {
-    border-right: none;
-  }
-
-  .feature-item:last-child {
-    flex: 0 0 100%;
-    /* 最后一个占满 */
-    border-bottom: none;
   }
 
   .info-grid {
@@ -1192,10 +1176,8 @@ onMounted(() => {
     font-size: 1rem;
   }
 
-  .feature-item {
-    flex: 0 0 100%;
-    /* 单列布局 */
-    border-right: none;
+  .features-grid {
+    gap: 1rem;
   }
 
   .action-btn {
